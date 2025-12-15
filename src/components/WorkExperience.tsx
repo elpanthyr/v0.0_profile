@@ -16,64 +16,45 @@ interface Experience {
 const experiences: Experience[] = [
   {
     logo: (
-      <div className="w-10 h-10 flex items-center justify-center">
-        <svg viewBox="0 0 24 24" className="w-8 h-8">
-          <rect x="1" y="1" width="10" height="10" fill="#f25022" />
-          <rect x="13" y="1" width="10" height="10" fill="#7fba00" />
-          <rect x="1" y="13" width="10" height="10" fill="#00a4ef" />
-          <rect x="13" y="13" width="10" height="10" fill="#ffb900" />
-        </svg>
+      <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-orange-400 to-red-500">
+        <span className="text-lg font-bold text-primary-foreground">M</span>
       </div>
     ),
-    company: "Microsoft Research",
-    role: "Research Fellow",
-    period: "July 2025 - Present",
-    type: "On Site",
-    description: "Working on Real time AI systems",
-    link: "https://www.microsoft.com/en-us/research/lab/microsoft-research-india/",
+    company: "Magma - Linux Foundation",
+    role: "DevOps Engineer",
+    period: "July 2025 - Nov 2025",
+    type: "Remote",
+    description:
+      "Optimized CI/CD pipelines reducing build times by 35%. Implemented containerized environments with Docker and Kubernetes improving deployment scalability by 50%.",
+    link: "https://magmacore.org/",
   },
   {
     logo: (
-      <div className="w-10 h-10 flex items-center justify-center text-foreground">
-        <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-        </svg>
+      <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600">
+        <span className="text-lg font-bold text-primary-foreground">P</span>
       </div>
     ),
-    company: "Apple",
-    role: "ML Intern",
-    period: "January 2025 - June 2025",
+    company: "Printellect Inc",
+    role: "Embedded Systems Intern",
+    period: "June 2025 - July 2025",
     type: "On Site",
-    description: "Part of the Unified Intelligence team",
-    link: "https://www.apple.com/",
+    description:
+      "Developed Raspberry Pi–based print-job gateway using IPP, cutting peak-hour wait times by 60%. Implemented queue-management daemon tripling daily print throughput from 100 to 300 jobs.",
+    link: "https://printellect.com/",
   },
   {
     logo: (
       <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400 to-teal-500">
-        <span className="text-lg font-bold text-primary-foreground">C</span>
+        <span className="text-lg font-bold text-primary-foreground">Q</span>
       </div>
     ),
-    company: "CognitiveLab",
-    role: "AI Researcher",
-    period: "January 2023 - Present",
+    company: "Quax Engineering Consultant",
+    role: "Instrumentation & Control Intern",
+    period: "June 2025",
     type: "On Site",
     description:
-      "Pioneered one of India's first Kannada bilingual Large Language Model - Ambari-7b. Developed Cognitune, an enterprise-grade LLMops platform, reducing time to production by 60%.",
-    link: "https://cognitivelab.in/",
-    badge: "Building a Research Lab",
-  },
-  {
-    logo: (
-      <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-foreground">
-        <span className="text-lg font-bold text-background">N</span>
-      </div>
-    ),
-    company: "NVIDIA",
-    role: "AI Solutions Architect Intern",
-    period: "June 2024 - December 2024",
-    type: "Remote",
-    description: "Worked on enterprise AI solutions and deployment strategies.",
-    link: "https://nvidia.com/",
+      "Integrated HART transmitters into OpenPLC via OPC-UA, cutting alarm response time by 40%. Deployed Node-RED SCADA dashboard achieving 99.5% system uptime.",
+    link: "#",
   },
 ];
 
