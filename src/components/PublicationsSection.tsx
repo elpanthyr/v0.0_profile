@@ -6,7 +6,6 @@ interface Publication {
   venue: string;
   venueColor: string;
   title: string;
-  conference: string;
   year: string;
   status: string;
   description: string;
@@ -15,38 +14,15 @@ interface Publication {
 
 const publications: Publication[] = [
   {
-    venue: "ICCV 2025",
+    venue: "Zenodo",
     venueColor: "bg-blue-100 text-blue-700",
     title:
-      "Nayana: A Foundation for Document-Centric Vision-Language Models via Multi-Task, Multimodal, and Multilingual Data Synthesis",
-    conference: "Workshop on Computer Vision for Developing Countries (CV4DC)",
+      "Quantum-Enhanced Spiking Neural Network on FPGA for Real-Time Industrial Anomaly Detection",
     year: "2025",
     status: "Accepted",
     description:
-      "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
-    tags: ["Dataset Generation", "Multimodal AI", "Document Understanding"],
-  },
-  {
-    venue: "CVPR 2025",
-    venueColor: "bg-purple-100 text-purple-700",
-    title: "ViViD - Vision Language model for Unified Visual Understanding of Documents",
-    conference: "Emergent Visual Abilities and Limits of Foundation Models (EVAL-FoMo 2025)",
-    year: "2025",
-    status: "Accepted",
-    description:
-      "A vision-language model specifically optimized for document understanding tasks, capable of processing diverse document formats with high accuracy.",
-    tags: ["Vision-Language Models", "Document Understanding", "Multimodal AI"],
-  },
-  {
-    venue: "NAACL 2025",
-    venueColor: "bg-green-100 text-green-700",
-    title: "Nayana OCR: A Scalable Framework for Document OCR in Low-Resource Languages",
-    conference: "Language Models for Underserved Communities",
-    year: "2025",
-    status: "Accepted",
-    description:
-      "Development of a specialized OCR system designed for low-resource Indic languages, addressing unique challenges in character recognition and document processing.",
-    tags: ["OCR", "Low-Resource Languages", "Document Processing"],
+      "A hardware-efficient neuromorphic framework that leverages quantum-inspired learning dynamics on FPGA for robust edge-level detection of abnormal patterns in time-series signals.",
+    tags: ["Neuromorphic Computing", "Quantum-Inspired Learning", "FPGA", "Edge AI", "Anomaly Detection"],
   },
 ];
 
