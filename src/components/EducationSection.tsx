@@ -1,0 +1,53 @@
+import { GraduationCap } from "lucide-react";
+
+interface Education {
+  institution: string;
+  period: string;
+  degree?: string;
+  location?: string;
+}
+
+const education: Education[] = [
+  {
+    institution: "PES University",
+    period: "2021 - 2025",
+    degree: "Bachelor of Technology",
+    location: "Bangalore, India",
+  },
+];
+
+export const EducationSection = () => {
+  return (
+    <section className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
+      <div className="mb-6">
+        <h2 className="text-lg font-semibold">Education</h2>
+      </div>
+      <div className="space-y-4">
+        {education.map((edu, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-4 p-4 border border-border rounded-lg"
+          >
+            <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+              <GraduationCap className="w-5 h-5 text-muted-foreground" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="font-medium">{edu.institution}</h3>
+                <span className="text-sm text-muted-foreground shrink-0">
+                  {edu.period}
+                </span>
+              </div>
+              {edu.degree && (
+                <p className="text-sm text-muted-foreground">{edu.degree}</p>
+              )}
+              {edu.location && (
+                <p className="text-xs text-muted-foreground mt-1">{edu.location}</p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};

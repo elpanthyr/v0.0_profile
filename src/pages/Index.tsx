@@ -3,8 +3,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { WorkExperience } from "@/components/WorkExperience";
 import { OpenSourceSection } from "@/components/OpenSourceSection";
 import { PublicationsSection } from "@/components/PublicationsSection";
-import { AchievementsSection } from "@/components/AchievementsSection";
-import { BlogSection } from "@/components/BlogSection";
+import { EducationSection } from "@/components/EducationSection";
 
 const Index = () => {
   return (
@@ -35,9 +34,7 @@ const Index = () => {
 
             <PublicationsSection />
 
-            <AchievementsSection />
-
-            <BlogSection />
+            <EducationSection />
           </div>
         </div>
       </main>
