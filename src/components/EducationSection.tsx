@@ -9,10 +9,10 @@ interface Education {
 
 const education: Education[] = [
   {
-    institution: "PES University",
-    period: "2021 - 2025",
-    degree: "Bachelor of Technology",
-    location: "Bangalore, India",
+    institution: "S.R.M Institute of Science and Technology",
+    period: "2023 - 2027",
+    degree: "B.Tech Electronics and Communication Engineering",
+    location: "Chennai, India",
   },
 ];
 
