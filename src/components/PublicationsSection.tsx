@@ -10,6 +10,7 @@ interface Publication {
   status: string;
   description: string;
   tags: string[];
+  url?: string;
 }
 
 const publications: Publication[] = [
@@ -23,6 +24,7 @@ const publications: Publication[] = [
     description:
       "A hardware-efficient neuromorphic framework that leverages quantum-inspired learning dynamics on FPGA for robust edge-level detection of abnormal patterns in time-series signals.",
     tags: ["Neuromorphic Computing", "Quantum-Inspired Learning", "FPGA", "Edge AI", "Anomaly Detection"],
+    url: "https://doi.org/10.5281/zenodo.17679941",
   },
 ];
 
@@ -48,15 +50,27 @@ export const PublicationsSection = () => {
             </div>
             <h3 className="font-medium mb-1">{pub.title}</h3>
             <p className="text-sm text-muted-foreground mb-2">
-              {pub.conference} • {pub.year} •{" "}
+              {pub.venue} • {pub.year} •{" "}
               <span className="text-green-600">{pub.status}</span>
             </p>
             <p className="text-sm text-muted-foreground mb-3">{pub.description}</p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1.5 mb-3">
               {pub.tags.map((tag) => (
                 <Tag key={tag}>{tag}</Tag>
               ))}
             </div>
+
+            {/* Read Paper link (opens DOI in a new tab) */}
+            {pub.url && (
+              <a
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-medium text-sky-600 hover:underline"
+              >
+                Read Paper
+              </a>
+            )}
           </div>
         ))}
       </div>
