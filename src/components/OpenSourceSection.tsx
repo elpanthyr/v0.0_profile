@@ -14,6 +14,26 @@ interface Repository {
 
 const repositories: Repository[] = [
   {
+    name: "Xperia",
+    description:
+      "Hinge for solo travellers - a social matching platform for travel companions",
+    stars: 0,
+    forks: 1,
+    language: "TypeScript",
+    tags: ["travel", "social", "convex"],
+    url: "https://github.com/elpanthyr/Xperia",
+  },
+  {
+    name: "Synapse",
+    description:
+      "Social network v2 - next generation social networking platform",
+    stars: 0,
+    forks: 0,
+    language: "TypeScript",
+    tags: ["social-network", "web-app", "convex"],
+    url: "https://github.com/elpanthyr/Synapse",
+  },
+  {
     name: "NQK",
     description:
       "Neural Quantum Kernel for Eye Disease Classification using quantum machine learning techniques",
