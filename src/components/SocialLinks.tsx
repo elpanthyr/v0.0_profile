@@ -27,11 +27,11 @@ interface SocialLinksProps {
 }
 
 export const SocialLinks = ({
-  email = "adithyaskolavi@gmail.com",
-  github = "https://github.com/adithya-s-k",
-  linkedin = "https://www.linkedin.com/in/adithya-s-kolavi/",
-  twitter = "https://twitter.com/adithya_s_k",
-  cv = "#",
+  email = "dthayalan760@gmail.com",
+  github = "https://github.com/elpanthyr",
+  linkedin = "https://www.linkedin.com/in/elpanthyr/",
+  twitter = "https://x.com/elpanthyr",
+  cv = "https://drive.google.com/file/d/1YzplWiwZyxfoA1lzVVZsEHWXCPkMbNXy/view?usp=drive_link",
 }: SocialLinksProps) => {
   const links = [
     { href: `mailto:${email}`, icon: <Mail className="w-4 h-4" />, label: "Email" },
