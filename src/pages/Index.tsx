@@ -1,13 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/HeroSection";
+import { AboutSection } from "@/components/AboutSection";
+import { WorkExperience } from "@/components/WorkExperience";
+import { OpenSourceSection } from "@/components/OpenSourceSection";
+import { PublicationsSection } from "@/components/PublicationsSection";
+import { AchievementsSection } from "@/components/AchievementsSection";
+import { BlogSection } from "@/components/BlogSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <head>
+        <title>Adithya S Kolavi - AI Researcher</title>
+        <meta
+          name="description"
+          content="AI Researcher building Generative AI solutions at Scale. Currently deep into Vision-Language Models and Agentic Systems."
+        />
+      </head>
+      <main className="min-h-screen bg-background">
+        <div className="max-w-3xl mx-auto px-6 py-12 md:py-20">
+          <div className="space-y-12">
+            <HeroSection
+              name="Adithya S Kolavi"
+              title="AI Researcher, Building Generative AI solutions at Scale"
+              imageUrl="https://adithyask.com/adithyask.jpeg"
+            />
+
+            <AboutSection
+              content="Building AI that actually works! Currently deep into Vision-Language Models and Agentic Systems, with hands-on experience taking AI projects from wild ideas to real products. Love tinkering with model fine-tuning and cloud deployments. Big open-source enthusiast - you'll find me contributing to projects that make AI more accessible to everyone."
+            />
+
+            <WorkExperience />
+
+            <OpenSourceSection />
+
+            <PublicationsSection />
+
+            <AchievementsSection />
+
+            <BlogSection />
+          </div>
+        </div>
+      </main>
+    </>
   );
 };
 
