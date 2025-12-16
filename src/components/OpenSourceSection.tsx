@@ -118,20 +118,10 @@ const repositories: Repository[] = [
 export const OpenSourceSection = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedRepos = showAll ? repositories : repositories.slice(0, 4);
-  const totalStars = repositories.reduce((acc, repo) => acc + repo.stars, 0);
 
   return (
     <section className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold">Projects</h2>
-        {totalStars > 0 && (
-          <div className="flex items-center gap-1 text-sm">
-            <Star className="w-4 h-4 text-star fill-star" />
-            <span className="font-medium">{totalStars}</span>
-            <span className="text-muted-foreground">total stars</span>
-          </div>
-        )}
-      </div>
+      <h2 className="text-lg font-semibold mb-6">Projects</h2>
       <div className="grid md:grid-cols-2 gap-4">
         {displayedRepos.map((repo) => (
           <a
