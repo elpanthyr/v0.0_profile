@@ -90,18 +90,18 @@ export const WorkExperience = () => {
               className="w-10 h-10 rounded-lg object-cover"
             />
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-1">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                 <a
                   href={exp.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium hover:underline"
+                  className="font-medium hover:underline break-words"
                 >
                   {exp.company}
                 </a>
-                <span className="text-sm text-muted-foreground shrink-0">{exp.period}</span>
+                <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
                 <p className="text-sm text-muted-foreground">{exp.role}</p>
                 <Tag>{exp.type}</Tag>
               </div>
