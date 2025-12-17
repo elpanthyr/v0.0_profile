@@ -32,9 +32,9 @@ export const EducationSection = () => {
               <GraduationCap className="w-5 h-5 text-muted-foreground" />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-medium">{edu.institution}</h3>
-                <span className="text-sm text-muted-foreground shrink-0">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-4">
+                <h3 className="font-medium break-words">{edu.institution}</h3>
+                <span className="text-sm text-muted-foreground">
                   {edu.period}
                 </span>
               </div>
