@@ -101,7 +101,7 @@ export const WorkExperience = () => {
                 </a>
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
+              <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
                 <p className="text-sm text-muted-foreground">{exp.role}</p>
                 <Tag>{exp.type}</Tag>
               </div>
