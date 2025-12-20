@@ -8,6 +8,8 @@ import quaxLogo from "@/assets/quax.jpeg";
 import srmsatLogo from "@/assets/srmsat.jpeg";
 import discordLogo from "@/assets/discord.jpeg";
 import srmistLogo from "@/assets/srmist.png";
+import iswdpLogo from "@/assets/iswdp.jpg";
+import ibmLogo from "@/assets/ibm.png";
 
 interface Experience {
   logo: string;
@@ -20,6 +22,16 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+  {
+    logo: ibmLogo,
+    company: "IBM",
+    role: "Qiskit Advocate",
+    period: "Oct 2025 - Present",
+    type: "Remote",
+    description:
+      "Building a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
+    link: "https://www.ibm.com/quantum",
+  },
   {
     logo: srmistLogo,
     company: "SRMIST",
@@ -39,6 +51,16 @@ const experiences: Experience[] = [
     description:
       "Optimized CI/CD pipelines reducing build times by 35%. Implemented containerized environments with Docker and Kubernetes improving deployment scalability by 50%.",
     link: "https://magmacore.org/",
+  },
+  {
+    logo: iswdpLogo,
+    company: "ISWDP",
+    role: "Student Trainee",
+    period: "July 2025 - Aug 2025",
+    type: "Remote",
+    description:
+      "Performed TCAD simulations using Synopsys Sentaurus suite to analyze electrical characteristics of MOSFETs and developed 2D structures by simulating fabrication processes. Evaluated impact of design parameters on critical device metrics including threshold voltage and ON-resistance.",
+    link: "#",
   },
   {
     logo: printellectLogo,

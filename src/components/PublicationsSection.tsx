@@ -34,12 +34,7 @@ export const PublicationsSection = () => {
 
   return (
     <section className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold">Academic Publications</h2>
-        <p className="text-sm text-muted-foreground">
-          Research papers and academic contributions
-        </p>
-      </div>
+      <h2 className="text-lg font-semibold mb-6">Academic Publications</h2>
       <div className="space-y-4">
         {displayedPublications.map((pub, index) => (
           <div key={index} className="p-4 border border-border rounded-lg">
