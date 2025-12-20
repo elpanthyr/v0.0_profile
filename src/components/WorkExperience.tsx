@@ -102,27 +102,29 @@ export const WorkExperience = () => {
   return (
     <section className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
-      <div className="space-y-0">
-        {displayedExperiences.map((exp) => (
+      <div className="relative">
+        {displayedExperiences.map((exp, index) => (
           <div
             key={exp.company}
             className="flex gap-4 p-4 -mx-4 rounded-lg transition-colors hover:bg-muted/50"
           >
-            <img
-              src={exp.logo}
-              alt={`${exp.company} logo`}
-              className="w-10 h-10 rounded-lg object-cover"
-            />
+            {/* Logo with timeline */}
+            <div className="relative flex flex-col items-center">
+              <img
+                src={exp.logo}
+                alt={`${exp.company} logo`}
+                className="w-10 h-10 rounded-lg object-cover z-10 relative"
+              />
+              {/* Connecting line - show for all except the last displayed item */}
+              {index < displayedExperiences.length - 1 && (
+                <div className="absolute top-10 w-[2px] h-[calc(100%+1rem)] bg-border dark:bg-muted-foreground/30" />
+              )}
+            </div>
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
-                <a
-                  href={exp.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium hover:underline break-words"
-                >
+                <span className="font-medium break-words">
                   {exp.company}
-                </a>
+                </span>
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
