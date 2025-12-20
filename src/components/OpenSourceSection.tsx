@@ -144,7 +144,7 @@ export const OpenSourceSection = () => {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+            <p className="text-sm text-muted-foreground mb-3">
               {repo.description}
             </p>
             <div className="flex flex-wrap gap-1.5">
