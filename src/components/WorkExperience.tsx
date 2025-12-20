@@ -18,7 +18,6 @@ interface Experience {
   period: string;
   type: string;
   description: string;
-  link?: string;
 }
 
 const experiences: Experience[] = [
@@ -29,8 +28,7 @@ const experiences: Experience[] = [
     period: "Oct 2025 - Present",
     type: "Remote",
     description:
-      "Building a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
-    link: "https://www.ibm.com/quantum",
+      "Designing a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
   },
   {
     logo: srmistLogo,
@@ -40,7 +38,6 @@ const experiences: Experience[] = [
     type: "On Site",
     description:
       "Building quantum computing applications for medical field.",
-    link: "https://www.srmist.edu.in/",
   },
   {
     logo: magmaLogo,
@@ -50,7 +47,6 @@ const experiences: Experience[] = [
     type: "Remote",
     description:
       "Optimized CI/CD pipelines reducing build times by 35%. Implemented containerized environments with Docker and Kubernetes improving deployment scalability by 50%.",
-    link: "https://magmacore.org/",
   },
   {
     logo: iswdpLogo,
@@ -60,7 +56,6 @@ const experiences: Experience[] = [
     type: "Remote",
     description:
       "Performed TCAD simulations using Synopsys Sentaurus suite to analyze electrical characteristics of MOSFETs and developed 2D structures by simulating fabrication processes. Evaluated impact of design parameters on critical device metrics including threshold voltage and ON-resistance.",
-    link: "#",
   },
   {
     logo: printellectLogo,
@@ -70,7 +65,6 @@ const experiences: Experience[] = [
     type: "On Site",
     description:
       "Developed Raspberry Pi–based print-job gateway using IPP, cutting peak-hour wait times by 60%. Implemented queue-management daemon tripling daily print throughput from 100 to 300 jobs.",
-    link: "https://printellect.com/",
   },
   {
     logo: quaxLogo,
@@ -80,7 +74,6 @@ const experiences: Experience[] = [
     type: "On Site",
     description:
       "Integrated HART transmitters into OpenPLC via OPC-UA, cutting alarm response time by 40%. Deployed Node-RED SCADA dashboard achieving 99.5% system uptime.",
-    link: "#",
   },
   {
     logo: srmsatLogo,
@@ -90,7 +83,6 @@ const experiences: Experience[] = [
     type: "On Site",
     description:
       "Simulated real-time ADCS in Scilab; integrated reaction-wheel & magnetometer control, boosting stability 70%. Built custom STM32F4 RTOS and KiCAD PCB, cutting power use by 25%.",
-    link: "#",
   },
   {
     logo: discordLogo,
@@ -100,7 +92,6 @@ const experiences: Experience[] = [
     type: "Self-employed",
     description:
       "Developed a discord bot which fetches and parses RSS feeds every 30–60 seconds, handling 1k+ items/day with <200 ms average processing latency per update. Posts deduplicated updates to Discord with 99.9% uptime, <1% duplicate rate, and supports 10+ feeds per server with rate-limit–safe batching.",
-    link: "#",
   },
 ];
 
