@@ -21,6 +21,7 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+  // ... (your full experiences array – unchanged)
   {
     logo: ibmLogo,
     company: "IBM",
@@ -102,35 +103,38 @@ export const WorkExperience = () => {
   return (
     <section className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
+
       <div className="relative">
+        
+        {displayedExperiences.length > 1 && (
+          <div
+            className="absolute w-[2px] bg-border dark:bg-muted-foreground/30 z-0"
+            style={{
+              left: "20px", 
+              top: "20px", 
+              height: "calc(100% - 40px)",
+            }}
+          />
+        )}
+
         {displayedExperiences.map((exp, index) => (
           <div
             key={exp.company}
-            className={`flex gap-3 sm:gap-4 ${index < displayedExperiences.length - 1 ? 'mb-4' : ''}`}
+            className={`flex gap-3 sm:gap-4 items-center ${index < displayedExperiences.length - 1 ? 'mb-8' : 'mb-0'}`}
           >
-            {/* Logo with timeline - now vertically centered */}
-            <div className="relative flex flex-col items-center">
-              {/* Wrapper to enable self-centering */}
-              <div className="flex items-center h-full">
-                <img
-                  src={exp.logo}
-                  alt={`${exp.company} logo`}
-                  className="w-10 h-10 rounded-lg object-cover z-10 relative shrink-0"
-                />
-              </div>
-
-              {/* Connecting line - adjusted to start from center of logo */}
-              {index < displayedExperiences.length - 1 && (
-                <div className="absolute top-1/2 w-[2px] h-[calc(100%+1rem)] translate-y-1/2 bg-border dark:bg-muted-foreground/30" />
-              )}
+            
+            <div className="relative shrink-0">
+              <img
+                src={exp.logo}
+                alt={`${exp.company} logo`}
+                className="w-10 h-10 rounded-lg object-cover z-10 bg-background shadow-sm"
+              />
             </div>
 
-            {/* Boxed content - unchanged */}
+            
             <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
-                <span className="font-medium break-words">
-                  {exp.company}
-                </span>
+                <span className="font-medium break-words">{exp.company}</span>
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
               </div>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
@@ -142,6 +146,7 @@ export const WorkExperience = () => {
           </div>
         ))}
       </div>
+
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
