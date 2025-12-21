@@ -106,7 +106,7 @@ export const WorkExperience = () => {
         {displayedExperiences.map((exp, index) => (
           <div
             key={exp.company}
-            className="flex gap-3 sm:gap-4"
+            className={`flex gap-3 sm:gap-4 ${index < displayedExperiences.length - 1 ? 'mb-4' : ''}`}
           >
             {/* Logo with timeline */}
             <div className="relative flex flex-col items-center">
