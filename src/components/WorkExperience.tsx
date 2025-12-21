@@ -104,26 +104,29 @@ export const WorkExperience = () => {
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
       <div className="relative">
-        {/* The Timeline Line */}
+        
         {displayedExperiences.length > 1 && (
           <div
-            className="absolute w-[2px] bg-border dark:bg-muted-foreground/30 z-0"
+            className="absolute bg-border dark:bg-muted-foreground/30"
             style={{
-              left: "20px",
-              top: "20px",    // Starts exactly at center of first logo
-              bottom: "20px", // Ends exactly at center of last logo
+              left: "20px", 
+              width: "2px",
+              
+              top: "20px", 
+              bottom: "20px",
+              zIndex: 0
             }}
           />
         )}
 
-        {/* Use a flex container with gap instead of individual margins to ensure height is calculated correctly */}
         <div className="flex flex-col gap-8">
           {displayedExperiences.map((exp) => (
             <div
               key={exp.company}
               className="flex gap-3 sm:gap-4 items-center relative"
             >
-              <div className="relative shrink-0 z-10">
+              
+              <div className="relative shrink-0 z-10 flex items-center justify-center w-10 h-10">
                 <img
                   src={exp.logo}
                   alt={`${exp.company} logo`}
@@ -131,6 +134,7 @@ export const WorkExperience = () => {
                 />
               </div>
 
+              
               <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                   <span className="font-medium break-words">{exp.company}</span>
