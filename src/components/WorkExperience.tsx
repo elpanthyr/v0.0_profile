@@ -21,7 +21,6 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
- 
   {
     logo: ibmLogo,
     company: "IBM",
@@ -105,52 +104,53 @@ export const WorkExperience = () => {
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
       <div className="relative">
-       
+        {/* The Timeline Line */}
         {displayedExperiences.length > 1 && (
           <div
             className="absolute w-[2px] bg-border dark:bg-muted-foreground/30 z-0"
             style={{
-              left: "20px", 
-              top: "20px",  
-              bottom: "20px", 
+              left: "20px",
+              top: "20px",    // Starts exactly at center of first logo
+              bottom: "20px", // Ends exactly at center of last logo
             }}
           />
         )}
 
-        {displayedExperiences.map((exp, index) => (
-          <div
-            key={exp.company}
-            className={`flex gap-3 sm:gap-4 items-center ${index < displayedExperiences.length - 1 ? 'mb-8' : 'mb-0'}`}
-          >
-           
-            <div className="relative shrink-0 z-10">
-              <img
-                src={exp.logo}
-                alt={`${exp.company} logo`}
-                className="w-10 h-10 rounded-lg object-cover bg-background shadow-sm border border-border"
-              />
-            </div>
+        {/* Use a flex container with gap instead of individual margins to ensure height is calculated correctly */}
+        <div className="flex flex-col gap-8">
+          {displayedExperiences.map((exp) => (
+            <div
+              key={exp.company}
+              className="flex gap-3 sm:gap-4 items-center relative"
+            >
+              <div className="relative shrink-0 z-10">
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="w-10 h-10 rounded-lg object-cover bg-background shadow-sm border border-border"
+                />
+              </div>
 
-            
-            <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
-                <span className="font-medium break-words">{exp.company}</span>
-                <span className="text-sm text-muted-foreground">{exp.period}</span>
+              <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
+                  <span className="font-medium break-words">{exp.company}</span>
+                  <span className="text-sm text-muted-foreground">{exp.period}</span>
+                </div>
+                <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
+                  <p className="text-sm text-muted-foreground">{exp.role}</p>
+                  <Tag>{exp.type}</Tag>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2">{exp.description}</p>
               </div>
-              <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
-                <p className="text-sm text-muted-foreground">{exp.role}</p>
-                <Tag>{exp.type}</Tag>
-              </div>
-              <p className="text-sm text-muted-foreground mt-2">{exp.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-4 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="mt-6 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           {showAll ? "Show less" : "Show more experiences"}
           <ChevronDown
