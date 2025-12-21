@@ -31,7 +31,7 @@ export const SocialLinks = ({
   github = "https://github.com/elpanthyr",
   linkedin = "https://www.linkedin.com/in/elpanthyr/",
   twitter = "https://x.com/elpanthyr",
-  cv = "https://drive.google.com/file/d/1YzplWiwZyxfoA1lzVVZsEHWXCPkMbNXy/view?usp=drive_link",
+  cv = "https://drive.google.com/file/d/1pyDeYP61ElovcYBx-ihr9ZC7KH64jrnb/view?usp=sharing",
 }: SocialLinksProps) => {
   const links = [
     { href: `mailto:${email}`, icon: <Mail className="w-4 h-4" />, label: "Email" },
