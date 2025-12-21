@@ -112,7 +112,7 @@ export const WorkExperience = () => {
             style={{
               left: "20px", 
               top: "20px",  
-              height: "calc(100% - 40px)", 
+              bottom: "20px", 
             }}
           />
         )}
@@ -123,16 +123,16 @@ export const WorkExperience = () => {
             className={`flex gap-3 sm:gap-4 items-center ${index < displayedExperiences.length - 1 ? 'mb-8' : 'mb-0'}`}
           >
            
-            <div className="relative shrink-0">
+            <div className="relative shrink-0 z-10">
               <img
                 src={exp.logo}
                 alt={`${exp.company} logo`}
-                className="w-10 h-10 rounded-lg object-cover z-10 bg-background shadow-sm"
+                className="w-10 h-10 rounded-lg object-cover bg-background shadow-sm border border-border"
               />
             </div>
 
             
-            <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors">
+            <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                 <span className="font-medium break-words">{exp.company}</span>
                 <span className="text-sm text-muted-foreground">{exp.period}</span>
