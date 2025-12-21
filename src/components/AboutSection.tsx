@@ -1,5 +1,7 @@
+import React from "react";
+
 interface AboutSectionProps {
-  content: string;
+  content: React.ReactNode;
 }
 
 export const AboutSection = ({ content }: AboutSectionProps) => {
