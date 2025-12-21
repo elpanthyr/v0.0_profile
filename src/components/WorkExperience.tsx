@@ -27,8 +27,7 @@ const experiences: Experience[] = [
     role: "Qiskit Advocate",
     period: "Oct 2025 - Present",
     type: "Remote",
-    description:
-      "Designing a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
+    description: "Designing a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
   },
   {
     logo: srmistLogo,
@@ -36,8 +35,7 @@ const experiences: Experience[] = [
     role: "Research Associate",
     period: "Sep 2025 - Present",
     type: "On Site",
-    description:
-      "Building quantum computing applications for medical field.",
+    description: "Building quantum computing applications for medical field.",
   },
   {
     logo: magmaLogo,
@@ -45,8 +43,7 @@ const experiences: Experience[] = [
     role: "DevOps Engineer",
     period: "July 2025 - Nov 2025",
     type: "Remote",
-    description:
-      "Optimized CI/CD pipelines reducing build times by 35%. Implemented containerized environments with Docker and Kubernetes improving deployment scalability by 50%.",
+    description: "Optimized CI/CD pipelines reducing build times by 35%. Implemented containerized environments with Docker and Kubernetes improving deployment scalability by 50%.",
   },
   {
     logo: iswdpLogo,
@@ -54,8 +51,7 @@ const experiences: Experience[] = [
     role: "Student Trainee",
     period: "July 2025 - Aug 2025",
     type: "Remote",
-    description:
-      "Performed TCAD simulations using Synopsys Sentaurus suite to analyze electrical characteristics of MOSFETs and developed 2D structures by simulating fabrication processes. Evaluated impact of design parameters on critical device metrics including threshold voltage and ON-resistance.",
+    description: "Performed TCAD simulations using Synopsys Sentaurus suite to analyze electrical characteristics of MOSFETs and developed 2D structures by simulating fabrication processes.",
   },
   {
     logo: printellectLogo,
@@ -63,8 +59,7 @@ const experiences: Experience[] = [
     role: "Embedded Systems Intern",
     period: "June 2025 - July 2025",
     type: "On Site",
-    description:
-      "Developed Raspberry Pi–based print-job gateway using IPP, cutting peak-hour wait times by 60%. Implemented queue-management daemon tripling daily print throughput from 100 to 300 jobs.",
+    description: "Developed Raspberry Pi–based print-job gateway using IPP, cutting peak-hour wait times by 60%.",
   },
   {
     logo: quaxLogo,
@@ -72,8 +67,7 @@ const experiences: Experience[] = [
     role: "Instrumentation & Control Intern",
     period: "June 2025",
     type: "On Site",
-    description:
-      "Integrated HART transmitters into OpenPLC via OPC-UA, cutting alarm response time by 40%. Deployed Node-RED SCADA dashboard achieving 99.5% system uptime.",
+    description: "Integrated HART transmitters into OpenPLC via OPC-UA, cutting alarm response time by 40%.",
   },
   {
     logo: srmsatLogo,
@@ -81,8 +75,7 @@ const experiences: Experience[] = [
     role: "Avionics Systems Engineer",
     period: "Aug 2024 - Oct 2025",
     type: "On Site",
-    description:
-      "Simulated real-time ADCS in Scilab; integrated reaction-wheel & magnetometer control, boosting stability 70%. Built custom STM32F4 RTOS and KiCAD PCB, cutting power use by 25%.",
+    description: "Simulated real-time ADCS in Scilab; integrated reaction-wheel & magnetometer control, boosting stability 70%.",
   },
   {
     logo: discordLogo,
@@ -90,8 +83,7 @@ const experiences: Experience[] = [
     role: "Bot Developer, Server Moderator & Owner",
     period: "Feb 2021 - June 2025",
     type: "Self-employed",
-    description:
-      "Developed a discord bot which fetches and parses RSS feeds every 30–60 seconds, handling 1k+ items/day with <200 ms average processing latency per update. Posts deduplicated updates to Discord with 99.9% uptime, <1% duplicate rate, and supports 10+ feeds per server with rate-limit–safe batching.",
+    description: "Developed a discord bot which fetches and parses RSS feeds every 30–60 seconds, handling 1k+ items/day.",
   },
 ];
 
@@ -103,38 +95,40 @@ export const WorkExperience = () => {
     <section className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
-      <div className="flex flex-col">
-        {displayedExperiences.map((exp, index) => (
-          <div key={exp.company} className="flex gap-4 group">
-            
-           
-            <div className="flex flex-col items-center shrink-0 w-10">
-              
-             
-              <div 
-                className={`w-[2px] h-4 bg-border dark:bg-muted-foreground/30 ${index === 0 ? 'opacity-0' : 'opacity-100'}`} 
-              />
+      <div className="relative">
+        
+        {displayedExperiences.length > 1 && (
+          <div
+            className="absolute bg-border dark:bg-muted-foreground/30"
+            style={{
+              left: "20px",
+              width: "2px",
+              top: "24px",    
+              bottom: "24px", 
+              zIndex: 0
+            }}
+          />
+        )}
 
+        <div className="flex flex-col gap-6">
+          {displayedExperiences.map((exp) => (
+            <div key={exp.company} className="flex gap-4 relative items-center">
+              
               
               <div className="relative z-10 shrink-0">
-                <img
-                  src={exp.logo}
-                  alt={`${exp.company} logo`}
-                  className="w-10 h-10 rounded-lg object-cover bg-background shadow-sm border border-border"
-                />
+                <div className="w-10 h-10 rounded-lg overflow-hidden border border-border bg-background shadow-sm flex items-center justify-center">
+                  <img
+                    src={exp.logo}
+                    alt={`${exp.company} logo`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
 
               
-              <div 
-                className={`w-[2px] flex-grow bg-border dark:bg-muted-foreground/30 ${index === displayedExperiences.length - 1 ? 'opacity-0' : 'opacity-100'}`} 
-              />
-            </div>
-
-            
-            <div className="flex-1 pb-8">
-              <div className="p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
+              <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
-                  <span className="font-medium break-words">{exp.company}</span>
+                  <span className="font-medium break-words text-foreground">{exp.company}</span>
                   <span className="text-sm text-muted-foreground">{exp.period}</span>
                 </div>
                 <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mt-1">
@@ -146,20 +140,17 @@ export const WorkExperience = () => {
                 </p>
               </div>
             </div>
-
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-2 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="mt-6 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           {showAll ? "Show less" : "Show more experiences"}
-          <ChevronDown
-            className={`w-4 h-4 transition-transform ${showAll ? "rotate-180" : ""}`}
-          />
+          <ChevronDown className={`w-4 h-4 transition-transform ${showAll ? "rotate-180" : ""}`} />
         </button>
       )}
     </section>
