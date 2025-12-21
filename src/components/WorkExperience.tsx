@@ -21,7 +21,7 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  // ... (your full experiences array – unchanged)
+  
   {
     logo: ibmLogo,
     company: "IBM",
