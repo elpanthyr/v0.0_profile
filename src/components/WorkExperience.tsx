@@ -21,7 +21,7 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
-  
+ 
   {
     logo: ibmLogo,
     company: "IBM",
@@ -105,14 +105,14 @@ export const WorkExperience = () => {
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
       <div className="relative">
-        
+       
         {displayedExperiences.length > 1 && (
           <div
             className="absolute w-[2px] bg-border dark:bg-muted-foreground/30 z-0"
             style={{
               left: "20px", 
-              top: "20px", 
-              height: "calc(100% - 40px)",
+              top: "20px",  
+              height: "calc(100% - 40px)", 
             }}
           />
         )}
@@ -122,7 +122,7 @@ export const WorkExperience = () => {
             key={exp.company}
             className={`flex gap-3 sm:gap-4 items-center ${index < displayedExperiences.length - 1 ? 'mb-8' : 'mb-0'}`}
           >
-            
+           
             <div className="relative shrink-0">
               <img
                 src={exp.logo}
