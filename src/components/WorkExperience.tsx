@@ -152,7 +152,7 @@ export const WorkExperience = () => {
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-6 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="mt-4 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           {showAll ? "Show less" : "Show more experiences"}
           <ChevronDown className={`w-4 h-4 transition-transform ${showAll ? "rotate-180" : ""}`} />
