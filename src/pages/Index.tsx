@@ -17,8 +17,8 @@ const Index = () => {
         />
       </head>
       <main className="min-h-screen bg-background">
-        <div className="max-w-3xl mx-auto px-6 py-12 md:py-20">
-          <div className="space-y-12">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-20">
+          <div className="space-y-8 md:space-y-12">
           <HeroSection
             name="Deenathayalan A"
             title="Embedded Systems & Quantum Computing Engineer"

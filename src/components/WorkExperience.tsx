@@ -106,21 +106,22 @@ export const WorkExperience = () => {
         {displayedExperiences.map((exp, index) => (
           <div
             key={exp.company}
-            className="flex gap-4 p-4 -mx-4 rounded-lg transition-colors hover:bg-muted/50"
+            className="flex gap-3 sm:gap-4"
           >
             {/* Logo with timeline */}
             <div className="relative flex flex-col items-center">
               <img
                 src={exp.logo}
                 alt={`${exp.company} logo`}
-                className="w-10 h-10 rounded-lg object-cover z-10 relative"
+                className="w-10 h-10 rounded-lg object-cover z-10 relative shrink-0"
               />
               {/* Connecting line - show for all except the last displayed item */}
               {index < displayedExperiences.length - 1 && (
                 <div className="absolute top-10 w-[2px] h-[calc(100%+1rem)] bg-border dark:bg-muted-foreground/30" />
               )}
             </div>
-            <div className="flex-1 min-w-0">
+            {/* Boxed content */}
+            <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                 <span className="font-medium break-words">
                   {exp.company}
