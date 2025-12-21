@@ -35,7 +35,7 @@ const Index = () => {
 
           <div id="about">
             <AboutSection
-              content="Building quantum-enhanced systems and embedded solutions!\nCurrently focused on FPGA neuromorphic architectures and quantum machine learning."
+              content="Building quantum-enhanced systems and embedded solutions! Currently focused on FPGA neuromorphic architectures and quantum machine learning."
             />
           </div>
 
