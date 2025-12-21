@@ -103,30 +103,20 @@ export const WorkExperience = () => {
     <section className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
-      <div className="relative">
-        
-        {displayedExperiences.length > 1 && (
-          <div
-            className="absolute bg-border dark:bg-muted-foreground/30"
-            style={{
-              left: "20px", 
-              width: "2px",
+      <div className="flex flex-col">
+        {displayedExperiences.map((exp, index) => (
+          <div key={exp.company} className="flex gap-4 group">
+            
+           
+            <div className="flex flex-col items-center shrink-0 w-10">
               
-              top: "20px", 
-              bottom: "20px",
-              zIndex: 0
-            }}
-          />
-        )}
+             
+              <div 
+                className={`w-[2px] h-4 bg-border dark:bg-muted-foreground/30 ${index === 0 ? 'opacity-0' : 'opacity-100'}`} 
+              />
 
-        <div className="flex flex-col gap-8">
-          {displayedExperiences.map((exp) => (
-            <div
-              key={exp.company}
-              className="flex gap-3 sm:gap-4 items-center relative"
-            >
               
-              <div className="relative shrink-0 z-10 flex items-center justify-center w-10 h-10">
+              <div className="relative z-10 shrink-0">
                 <img
                   src={exp.logo}
                   alt={`${exp.company} logo`}
@@ -135,7 +125,14 @@ export const WorkExperience = () => {
               </div>
 
               
-              <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
+              <div 
+                className={`w-[2px] flex-grow bg-border dark:bg-muted-foreground/30 ${index === displayedExperiences.length - 1 ? 'opacity-0' : 'opacity-100'}`} 
+              />
+            </div>
+
+            
+            <div className="flex-1 pb-8">
+              <div className="p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                   <span className="font-medium break-words">{exp.company}</span>
                   <span className="text-sm text-muted-foreground">{exp.period}</span>
@@ -144,17 +141,20 @@ export const WorkExperience = () => {
                   <p className="text-sm text-muted-foreground">{exp.role}</p>
                   <Tag>{exp.type}</Tag>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">{exp.description}</p>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                  {exp.description}
+                </p>
               </div>
             </div>
-          ))}
-        </div>
+
+          </div>
+        ))}
       </div>
 
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-6 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="mt-2 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           {showAll ? "Show less" : "Show more experiences"}
           <ChevronDown
