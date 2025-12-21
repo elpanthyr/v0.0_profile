@@ -95,28 +95,23 @@ export const WorkExperience = () => {
     <section className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
 
-      <div className="relative">
-        
-        {displayedExperiences.length > 1 && (
-          <div
-            className="absolute bg-border dark:bg-muted-foreground/30"
-            style={{
-              left: "20px",
-              width: "2px",
-              top: "24px",    
-              bottom: "24px", 
-              zIndex: 0
-            }}
-          />
-        )}
+      <div className="flex flex-col">
+        {displayedExperiences.map((exp, index) => (
+          <div key={exp.company} className="flex gap-4 group">
+            
+           
+            <div className="flex flex-col items-center shrink-0 w-10">
+              
+              
+              <div 
+                className={`w-[2px] flex-1 bg-border dark:bg-muted-foreground/30 ${
+                  index === 0 ? "opacity-0" : "opacity-100"
+                }`} 
+              />
 
-        <div className="flex flex-col gap-6">
-          {displayedExperiences.map((exp) => (
-            <div key={exp.company} className="flex gap-4 relative items-center">
-              
-              
-              <div className="relative z-10 shrink-0">
-                <div className="w-10 h-10 rounded-lg overflow-hidden border border-border bg-background shadow-sm flex items-center justify-center">
+             
+              <div className="relative z-10 my-2">
+                <div className="w-10 h-10 rounded-lg border border-border bg-background shadow-sm flex items-center justify-center overflow-hidden">
                   <img
                     src={exp.logo}
                     alt={`${exp.company} logo`}
@@ -126,7 +121,16 @@ export const WorkExperience = () => {
               </div>
 
               
-              <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
+              <div 
+                className={`w-[2px] flex-1 bg-border dark:bg-muted-foreground/30 ${
+                  index === displayedExperiences.length - 1 ? "opacity-0" : "opacity-100"
+                }`} 
+              />
+            </div>
+
+         
+            <div className="flex-1 py-4">
+              <div className="p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors bg-background/50">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                   <span className="font-medium break-words text-foreground">{exp.company}</span>
                   <span className="text-sm text-muted-foreground">{exp.period}</span>
@@ -140,14 +144,15 @@ export const WorkExperience = () => {
                 </p>
               </div>
             </div>
-          ))}
-        </div>
+
+          </div>
+        ))}
       </div>
 
       {experiences.length > 3 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-6 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="mt-4 w-full flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           {showAll ? "Show less" : "Show more experiences"}
           <ChevronDown className={`w-4 h-4 transition-transform ${showAll ? "rotate-180" : ""}`} />
