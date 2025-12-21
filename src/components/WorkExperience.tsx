@@ -109,15 +109,15 @@ export const WorkExperience = () => {
             className={`flex gap-3 sm:gap-4 ${index < displayedExperiences.length - 1 ? 'mb-4' : ''}`}
           >
             {/* Logo with timeline */}
-            <div className="relative flex flex-col items-center">
+            <div className="relative flex flex-col items-center justify-center h-full">
               <img
                 src={exp.logo}
                 alt={`${exp.company} logo`}
                 className="w-10 h-10 rounded-lg object-cover z-10 relative shrink-0"
               />
-              {/* Connecting line - show for all except the last displayed item */}
+              {/* Connecting line (grows downward from below the logo) */}
               {index < displayedExperiences.length - 1 && (
-                <div className="absolute top-10 w-[2px] h-[calc(100%+1rem)] bg-border dark:bg-muted-foreground/30" />
+                <div className="w-[2px] mt-2 flex-1 bg-border dark:bg-muted-foreground/30" />
               )}
             </div>
             {/* Boxed content */}
