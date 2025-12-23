@@ -13,7 +13,7 @@ export const ThemeToggle = () => {
   if (!mounted) {
     return (
       <button
-        className="fixed bottom-20 right-4 md:right-40 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-lg flex items-center justify-center"
+        className="fixed bottom-20 right-4 md:right-60 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-lg flex items-center justify-center"
         aria-label="Toggle theme"
       >
         <div className="w-5 h-5" />
