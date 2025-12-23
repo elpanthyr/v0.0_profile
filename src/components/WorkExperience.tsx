@@ -121,7 +121,7 @@ export const WorkExperience = () => {
               )}
             </div>
             
-            <div className="flex-1 min-w-0 p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors">
+            <div className="flex-1 min-w-0 p-2.5 sm:p-4 border border-border rounded-lg hover:bg-muted/30 transition-colors">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-1">
                 <span className="font-medium break-words">
                   {exp.company}

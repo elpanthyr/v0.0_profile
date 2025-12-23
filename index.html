@@ -1,10 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Deenathayalan A - Embedded Systems & Quantum Computing Engineer</title>
     <meta name="description" content="Building quantum-enhanced systems and embedded solutions! Currently focused on FPGA neuromorphic architectures and quantum machine learning. Experienced in DevOps, containerization, and industrial automation. Samsung Student Fellowship recipient and IBM Qiskit Advocate." />
     <meta name="author" content="Deenathayalan A" />
@@ -13,6 +11,47 @@
     <meta property="og:title" content="Deenathayalan A - Embedded Systems & Quantum Computing Engineer" />
     <meta property="og:description" content="Building quantum-enhanced systems and embedded solutions! Currently focused on FPGA neuromorphic architectures and quantum machine learning. Experienced in DevOps, containerization, and industrial automation. Samsung Student Fellowship recipient and IBM Qiskit Advocate." />
     <meta property="og:type" content="website" />
+
+    <!-- Inline critical CSS for pre-rendering -->
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 5%;
+        --border: 0 0% 85%;
+        --muted-foreground: 0 0% 40%;
+      }
+      .dark {
+        --background: 0 0% 4%;
+        --foreground: 0 0% 98%;
+        --border: 0 0% 22%;
+        --muted-foreground: 0 0% 65%;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+
+    <!-- JSON-LD structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Deenathayalan A",
+      "jobTitle": "Embedded Systems & Quantum Computing Engineer",
+      "url": "https://deenathayalan.dev",
+      "sameAs": [
+        "https://github.com/elpanthyr",
+        "https://linkedin.com/in/deenathayalan-a",
+        "https://x.com/elpanthyr"
+      ],
+      "knowsAbout": ["Embedded Systems", "Quantum Computing", "FPGA", "DevOps", "Machine Learning"]
+    }
+    </script>
   </head>
 
   <body>
@@ -21,7 +60,7 @@
     
     <!-- Static HTML fallback for web scrapers and SEO crawlers -->
     <noscript>
-      <div style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Inter, system-ui, sans-serif;">
+      <div style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: 'JetBrains Mono', monospace; background: #0a0a0a; color: #fafafa;">
         <header>
           <h1>Deenathayalan A</h1>
           <p>Embedded Systems & Quantum Computing Engineer</p>
