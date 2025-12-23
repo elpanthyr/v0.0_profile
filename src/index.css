@@ -9,23 +9,23 @@
 
 @layer base {
   :root {
-    --background: 40 20% 98%;
-    --foreground: 240 10% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 240 10% 10%;
-    --primary-foreground: 40 20% 98%;
+    --primary: 0 0% 5%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 10% 94%;
-    --secondary-foreground: 240 10% 10%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 5%;
 
-    --muted: 40 10% 94%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 210 100% 52%;
     --accent-foreground: 0 0% 100%;
@@ -33,51 +33,51 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 10% 88%;
-    --input: 40 10% 88%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
     --ring: 210 100% 52%;
 
     --radius: 0.5rem;
 
     /* Tag colors */
-    --tag-bg: 40 10% 94%;
-    --tag-text: 240 5% 35%;
+    --tag-bg: 0 0% 94%;
+    --tag-text: 0 0% 30%;
 
     /* Star color */
     --star: 45 100% 50%;
   }
 
   .dark {
-    --background: 240 10% 6%;
-    --foreground: 40 20% 98%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 240 10% 8%;
-    --card-foreground: 40 20% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 8%;
-    --popover-foreground: 40 20% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 40 20% 98%;
-    --primary-foreground: 240 10% 6%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 240 10% 15%;
-    --secondary-foreground: 40 20% 98%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 40 10% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 210 100% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 40 20% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 240 10% 18%;
-    --input: 240 10% 18%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
     --ring: 210 100% 52%;
 
-    --tag-bg: 240 10% 15%;
-    --tag-text: 40 10% 70%;
+    --tag-bg: 0 0% 15%;
+    --tag-text: 0 0% 75%;
 
     --star: 45 100% 50%;
   }
@@ -85,7 +85,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-200;
   }
 
   html {
@@ -93,7 +93,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-mono antialiased;
+    @apply bg-background text-foreground font-mono antialiased transition-colors duration-300;
   }
 }
 
