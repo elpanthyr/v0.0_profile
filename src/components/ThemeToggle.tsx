@@ -13,7 +13,7 @@ export const ThemeToggle = () => {
   if (!mounted) {
     return (
       <button
-        className="fixed bottom-20 right-4 md:bottom-24 md:right-8 lg:bottom-20 lg:right-72 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-xl flex items-center justify-center"
+        className="fixed bottom-20 right-4 md:bottom-24 md:right-8 lg:bottom-20 lg:right-72 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-lg flex items-center justify-center"
         aria-label="Toggle theme"
       >
         <div className="w-5 h-5" />
@@ -26,7 +26,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="fixed bottom-20 right-4 md:bottom-24 md:right-8 lg:bottom-20 lg:right-72 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 ease-in-out flex items-center justify-center"
+      className="fixed bottom-20 right-4 md:bottom-24 md:right-8 lg:bottom-20 lg:right-72 z-50 w-12 h-12 rounded-full bg-secondary/80 backdrop-blur-sm border border-border shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <div className="relative transition-transform duration-300">
