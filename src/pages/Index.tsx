@@ -1,3 +1,4 @@
+import { Head } from 'vite-react-ssg'
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { WorkExperience } from "@/components/WorkExperience";
@@ -9,13 +10,20 @@ import profileImage from "@/assets/profile.webp";
 const Index = () => {
   return (
     <>
-      <head>
+      <Head>
         <title>Deenathayalan A - Embedded Systems & Quantum Computing Engineer</title>
         <meta
           name="description"
           content="Embedded Systems & Quantum Computing Engineer. DevOps, FPGA design, and quantum machine learning enthusiast."
         />
-      </head>
+        <meta property="og:title" content="Deenathayalan A - Portfolio" />
+        <meta property="og:description" content="Embedded Systems & Quantum Computing Engineer specializing in DevOps, FPGA design, and quantum machine learning." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Deenathayalan A - Portfolio" />
+        <meta name="twitter:description" content="Embedded Systems & Quantum Computing Engineer" />
+        <link rel="canonical" href="https://deenathayalan.dev/" />
+      </Head>
       <main className="min-h-screen bg-background">
         <div className="max-w-3xl mx-auto px-3 md:px-6 py-6 md:py-20">
           <div className="space-y-6 md:space-y-12">
