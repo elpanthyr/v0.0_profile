@@ -1,5 +1,12 @@
-import { ViteReactSSG } from 'vite-react-ssg'
-import { routes } from './routes'
-import './index.css'
+import { createRoot, hydrateRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-export const createRoot = ViteReactSSG({ routes })
+const rootElement = document.getElementById("root")!;
+
+// Use hydrate for react-snap pre-rendered content
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, <App />);
+} else {
+  createRoot(rootElement).render(<App />);
+}
