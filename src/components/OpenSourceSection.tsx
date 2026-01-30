@@ -44,14 +44,14 @@ const repositories: Repository[] = [
     url: "https://github.com/elpanthyr/NQK",
   },
   {
-    name: "QuantumRL",
+    name: "RL_ZNE",
     description:
-      "Quantum Reinforcement Learning for Eye Disease Classification combining RL with quantum computing",
+      "RL-Based selection of error mitigation parameters for Digital Zero Noise Extrapolation",
     stars: 0,
     forks: 0,
     language: "Jupyter Notebook",
-    tags: ["quantum", "reinforcement-learning", "healthcare"],
-    url: "https://github.com/elpanthyr/QuantumRL",
+    tags: ["quantum", "reinforcement-learning"],
+    url: "https://github.com/elpanthyr/ID_56_QAMP_25",
   },
   {
     name: "EQIPO",
