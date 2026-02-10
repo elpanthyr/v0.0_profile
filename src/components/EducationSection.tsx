@@ -35,18 +35,18 @@ export const EducationSection = () => {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-4">
-                <h3 className="font-medium break-words leading-tight">{edu.institution}</h3>
+                <h3 className="font-medium break-words">{edu.institution}</h3>
                 <div className="flex flex-col items-start sm:items-end shrink-0">
-                  <span className="text-sm text-muted-foreground leading-tight">
+                  <span className="text-sm text-muted-foreground">
                     {edu.period}
                   </span>
                   {edu.cgpa && (
-                    <span className="text-sm text-muted-foreground leading-tight">CGPA: {edu.cgpa}</span>
+                    <span className="text-sm text-muted-foreground">CGPA: {edu.cgpa}</span>
                   )}
                 </div>
               </div>
               {edu.degree && (
-                <p className="text-sm text-muted-foreground mt-0.5">{edu.degree}</p>
+                <p className="text-sm text-muted-foreground">{edu.degree}</p>
               )}
               {edu.location && (
                 <p className="text-xs text-muted-foreground mt-1">{edu.location}</p>
