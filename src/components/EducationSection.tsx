@@ -34,8 +34,16 @@ export const EducationSection = () => {
               <GraduationCap className="w-5 h-5 text-muted-foreground" />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
-                <h3 className="font-medium break-words">{edu.institution}</h3>
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-4">
+                <div>
+                  <h3 className="font-medium break-words">{edu.institution}</h3>
+                  {edu.degree && (
+                    <p className="text-sm text-muted-foreground">{edu.degree}</p>
+                  )}
+                  {edu.location && (
+                    <p className="text-xs text-muted-foreground mt-1">{edu.location}</p>
+                  )}
+                </div>
                 <div className="flex flex-col items-start sm:items-end shrink-0">
                   <span className="text-sm text-muted-foreground">
                     {edu.period}
@@ -45,12 +53,6 @@ export const EducationSection = () => {
                   )}
                 </div>
               </div>
-              {edu.degree && (
-                <p className="text-sm text-muted-foreground">{edu.degree}</p>
-              )}
-              {edu.location && (
-                <p className="text-xs text-muted-foreground mt-1">{edu.location}</p>
-              )}
             </div>
           </div>
         ))}
