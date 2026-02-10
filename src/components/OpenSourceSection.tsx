@@ -34,16 +34,6 @@ const repositories: Repository[] = [
     url: "https://github.com/elpanthyr/Synapse",
   },
   {
-    name: "NQK",
-    description:
-      "Neural Quantum Kernel for Eye Disease Classification using quantum machine learning techniques",
-    stars: 0,
-    forks: 0,
-    language: "Jupyter Notebook",
-    tags: ["quantum-ml", "medical-ai", "classification"],
-    url: "https://github.com/elpanthyr/NQK",
-  },
-  {
     name: "RL_ZNE",
     description:
       "RL-Based selection of error mitigation parameters for Digital Zero Noise Extrapolation",
