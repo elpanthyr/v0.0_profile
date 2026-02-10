@@ -5,6 +5,7 @@ interface Education {
   period: string;
   degree?: string;
   location?: string;
+  cgpa?: string;
 }
 
 const education: Education[] = [
@@ -13,6 +14,7 @@ const education: Education[] = [
     period: "2023 - 2027",
     degree: "B.Tech Electronics and Communication Engineering",
     location: "Chennai, India",
+    cgpa: "8.45 / 10",
   },
 ];
 
@@ -34,9 +36,16 @@ export const EducationSection = () => {
             <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0 sm:gap-4">
                 <h3 className="font-medium break-words">{edu.institution}</h3>
-                <span className="text-sm text-muted-foreground">
-                  {edu.period}
-                </span>
+                <div className="flex flex-col items-start sm:items-end shrink-0">
+                  <span className="text-sm text-muted-foreground">
+                    {edu.period}
+                  </span>
+                  {edu.cgpa && (
+                    <span className="text-sm text-muted-foreground">
+                      CGPA: {edu.cgpa}
+                    </span>
+                  )}
+                </div>
               </div>
               {edu.degree && (
                 <p className="text-sm text-muted-foreground">{edu.degree}</p>
