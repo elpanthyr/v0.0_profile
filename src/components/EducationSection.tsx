@@ -40,15 +40,13 @@ export const EducationSection = () => {
                   <span className="text-sm text-muted-foreground">
                     {edu.period}
                   </span>
-                </div>
-              </div>
-              {edu.degree && (
-                <div className="flex flex-wrap items-baseline gap-x-3">
-                  <p className="text-sm text-muted-foreground">{edu.degree}</p>
                   {edu.cgpa && (
                     <span className="text-sm text-muted-foreground">CGPA: {edu.cgpa}</span>
                   )}
                 </div>
+              </div>
+              {edu.degree && (
+                <p className="text-sm text-muted-foreground">{edu.degree}</p>
               )}
               {edu.location && (
                 <p className="text-xs text-muted-foreground mt-1">{edu.location}</p>
