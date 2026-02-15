@@ -103,6 +103,16 @@ const repositories: Repository[] = [
     tags: ["qiskit", "quantum-circuits", "education"],
     url: "https://github.com/elpanthyr/Quantum_ckts",
   },
+  {
+    name: "Optimized RVV AudioMark ",
+    description:
+      "RISC-V Vector Optimization: AudioMark AXPY Kernel",
+    stars: 0,
+    forks: 0,
+    language: "C",
+    tags: ["Digital Signal Processing"],
+    url: "https://github.com/elpanthyr/code",
+  },
 ];
 
 export const OpenSourceSection = () => {
