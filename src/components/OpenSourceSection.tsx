@@ -110,7 +110,7 @@ const repositories: Repository[] = [
     stars: 0,
     forks: 0,
     language: "C",
-    tags: ["Digital Signal Processing"],
+    tags: ["Digital Signal Processing", "Docker"],
     url: "https://github.com/elpanthyr/code",
   },
 ];
