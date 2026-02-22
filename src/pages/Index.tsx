@@ -10,10 +10,10 @@ const Index = () => {
   return (
     <>
       <head>
-        <title>Deenathayalan A - Embedded Systems & Quantum Computing Engineer</title>
+        <title>Deenathayalan A - App Developer, Embedded Systems & Quantum Computing Engineer</title>
         <meta
           name="description"
-          content="Embedded Systems & Quantum Computing Engineer. DevOps, FPGA design, and quantum machine learning enthusiast."
+          content="App Developer, Embedded Systems & Quantum Computing Engineer."
         />
       </head>
       <main className="min-h-screen bg-background">
@@ -21,7 +21,7 @@ const Index = () => {
           <div className="space-y-6 md:space-y-12">
           <HeroSection
             name="Deenathayalan A"
-            title="Embedded Systems & Quantum Computing Engineer"
+            title="App Developer, Embedded Systems & Quantum Computing Engineer"
             imageUrl={profileImage}
           />
 
