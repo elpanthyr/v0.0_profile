@@ -20,7 +20,7 @@ const repositories: Repository[] = [
     stars: 0,
     forks: 0,
     language: "Swift",
-    tags: ["SwiftUI", "ARKit", "RealityKit"],
+    tags: ["Sound Analysis", "ARKit"],
     url: "https://github.com/elpanthyr/EchoLens-AR",
   },
   {
