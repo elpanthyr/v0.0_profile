@@ -13,6 +13,16 @@ interface Repository {
 }
 
 const repositories: Repository[] = [
+   {
+    name: "EchoLens-AR",
+    description:
+      "Visualizing sounds through spatial AR. ",
+    stars: 0,
+    forks: 0,
+    language: "Swift",
+    tags: ["SwiftUI", "ARKit", "RealityKit"],
+    url: "https://github.com/elpanthyr/EchoLens-AR",
+  },
   {
     name: "Xperia",
     description:
