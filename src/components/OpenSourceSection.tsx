@@ -121,7 +121,7 @@ const repositories: Repository[] = [
     forks: 0,
     language: "C",
     tags: ["Digital Signal Processing", "Docker"],
-    url: "https://github.com/elpanthyr/code",
+    url: "https://github.com/elpanthyr/Optimized_RVV_AudioMark",
   },
 ];
 
