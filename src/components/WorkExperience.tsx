@@ -58,15 +58,6 @@ const experiences: Experience[] = [
       "Performed TCAD simulations using Synopsys Sentaurus suite to analyze electrical characteristics of MOSFETs and developed 2D structures by simulating fabrication processes. Evaluated impact of design parameters on critical device metrics including threshold voltage and ON-resistance.",
   },
   {
-    logo: printellectLogo,
-    company: "Printellect Inc",
-    role: "Embedded Systems Intern",
-    period: "June 2025 - July 2025",
-    type: "On Site",
-    description:
-      "Developed Raspberry Pi–based print-job gateway using IPP, cutting peak-hour wait times by 60%. Implemented queue-management daemon tripling daily print throughput from 100 to 300 jobs.",
-  },
-  {
     logo: quaxLogo,
     company: "Quax Engineering Consultant",
     role: "Instrumentation & Control Intern",
