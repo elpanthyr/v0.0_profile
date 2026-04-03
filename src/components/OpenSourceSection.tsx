@@ -14,6 +14,16 @@ interface Repository {
 
 const repositories: Repository[] = [
    {
+    name: "CVANN",
+    description:
+      "Complex-Valued Radio Modulation Classification Pipeline ",
+    stars: 0,
+    forks: 0,
+    language: "Jupyter Notebook",
+    tags: ["Digital Signal Processing", "Artificial Neural Network"],
+    url: "https://github.com/elpanthyr/CV_ANN",
+   },
+   {
     name: "EchoLens-AR",
     description:
       "Visualizing sounds through spatial AR. ",
