@@ -26,6 +26,18 @@ const publications: Publication[] = [
     tags: ["Neuromorphic Computing", "Quantum-Inspired Learning", "FPGA", "Edge AI", "Anomaly Detection"],
     url: "https://doi.org/10.5281/zenodo.17679941",
   },
+  {
+    venue: "Zenodo",
+    venueColor: "bg-blue-100 text-blue-700",
+    title:
+      "XGBoost-Driven Predictive Modelling for Performance Optimization of Direct Evaporative Cooling Integrated with Phase Change Plates in Data Centers",
+    year: "2026",
+    status: "Accepted",
+    description:
+      "This research replaces computationally prohibitive physics-based models of DPDEC-PCP data center cooling systems with an XGBoost surrogate, hyperparameter-tuned via Bayesian optimization to instantly predict thermal performance. SHapley Additive exPlanations (SHAP) guarantee algorithmic interpretability by mathematically validating the monotonic thermodynamic dominance of inlet temperature. The trained surrogate is subsequently embedded into a dynamic, multi-objective optimization loop utilizing soft constraint relaxation to generate real-time Pareto fronts, providing operators with deterministic control maps to actively minimize energy consumption while strictly satisfying ASHRAE constraints.",
+    tags: ["Machine Learning", "XGBoost", "Data Center Cooling", "SHAP", "Multi-Objective Optimization", "Direct Evaporative Cooling"],
+    url: "https://doi.org/10.5281/zenodo.20055333",
+}
 ];
 
 export const PublicationsSection = () => {
