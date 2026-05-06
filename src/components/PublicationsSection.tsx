@@ -34,7 +34,7 @@ const publications: Publication[] = [
     year: "2026",
     status: "Accepted",
     description:
-      "This research replaces computationally prohibitive physics-based models of DPDEC-PCP data center cooling systems with an XGBoost surrogate, hyperparameter-tuned via Bayesian optimization to instantly predict thermal performance. SHapley Additive exPlanations (SHAP) guarantee algorithmic interpretability by mathematically validating the monotonic thermodynamic dominance of inlet temperature. The trained surrogate is subsequently embedded into a dynamic, multi-objective optimization loop utilizing soft constraint relaxation to generate real-time Pareto fronts, providing operators with deterministic control maps to actively minimize energy consumption while strictly satisfying ASHRAE constraints.",
+      "A SHAP-validated, Bayesian-optimized XGBoost surrogate framework integrating soft-constraint Pareto mapping for real-time energy minimization and strict ASHRAE thermal compliance in non-linear data center cooling systems.",
     tags: ["Machine Learning", "XGBoost", "Data Center Cooling", "SHAP", "Multi-Objective Optimization", "Direct Evaporative Cooling"],
     url: "https://doi.org/10.5281/zenodo.20055333",
 }
