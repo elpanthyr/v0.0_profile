@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     period: "Oct 2025 - Feb 2026",
     type: "Remote",
     description:
-      "Designined a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
+      "Designed a RL-based framework for optimal selection of noise factors and extrapolators for ZNE.",
   },
   {
     logo: srmistLogo,
