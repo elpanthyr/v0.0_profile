@@ -34,7 +34,7 @@ const experiences: Experience[] = [
     logo: srmistLogo,
     company: "SRMIST",
     role: "Research Associate",
-    period: "Sep 2025 - Present",
+    period: "Sep 2025 - Feb 2026",
     type: "On Site",
     description:
       "Building quantum computing applications for medical field.",
