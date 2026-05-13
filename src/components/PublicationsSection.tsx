@@ -24,7 +24,7 @@ const publications: Publication[] = [
     description:
       "A hardware-efficient neuromorphic framework that leverages quantum-inspired learning dynamics on FPGA for robust edge-level detection of abnormal patterns in time-series signals.",
     tags: ["Neuromorphic Computing", "Quantum-Inspired Learning", "FPGA", "Edge AI", "Anomaly Detection"],
-    url: "https://doi.org/10.5281/zenodo.17679941",
+    url: "https://doi.org/10.5281/zenodo.20140111",
   },
   {
     venue: "Zenodo",
