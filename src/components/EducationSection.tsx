@@ -14,7 +14,7 @@ const education: Education[] = [
     period: "2023 - 2027",
     degree: "B.Tech Electronics and Communication Engineering",
     location: "Chennai, India",
-    cgpa: "8.45 / 10",
+    cgpa: "8.5 / 10",
   },
 ];
 
